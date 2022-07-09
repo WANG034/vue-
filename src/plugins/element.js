@@ -28,7 +28,8 @@ import {
     Tag,
     Tree,
     Select,
-    Option
+    Option,
+    Cascader
     } from 'element-ui'
 
 // 导入消息弹窗
@@ -65,3 +66,4 @@ Vue.use(Tag)
 Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Cascader)

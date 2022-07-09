@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './plugins/element.js'
+import TreeTable from 'vue-table-with-tree-grid'
 
 import axios from 'axios'
 // 配置请求的根路径
@@ -19,6 +20,8 @@ axios.interceptors.request.use(config=>{
 // 将axios包挂载在vue2的实例对象上，这样全局组件就可以使用这个axios
 Vue.prototype.$http = axios
 
+// 注册treetable为全局组件
+Vue.component('tree-table',TreeTable)
 
 // 引入外部图标
 import './assets/fonts/iconfont.css'
