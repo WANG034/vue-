@@ -29,7 +29,11 @@ import {
     Tree,
     Select,
     Option,
-    Cascader
+    Cascader,
+    Calendar,
+    Alert,
+    Tabs,
+    TabPane
     } from 'element-ui'
 
 // 导入消息弹窗
@@ -67,3 +71,7 @@ Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
 Vue.use(Cascader)
+Vue.use(Calendar)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
