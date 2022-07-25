@@ -17,11 +17,33 @@ axios.interceptors.request.use(config=>{
   return config
 })
 
+// 导入副文本编辑器
+import VueQuillEditor from 'vue-quill-editor'
+// 导入副文本编辑器的样式
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+
+// 注册副文本全局组件
+Vue.use(VueQuillEditor)
+
 // 将axios包挂载在vue2的实例对象上，这样全局组件就可以使用这个axios
 Vue.prototype.$http = axios
 
 // 注册treetable为全局组件
 Vue.component('tree-table',TreeTable)
+
+// 注册时间过滤器
+Vue.filter('dataFormat' , function(originVal){
+  const dt = new Date(originVal)
+  const y = dt.getFullYear()
+  const m = (dt.getMonth() + 1 + '').padStart(2,'0')
+  const d = (dt.getDate() + '').padStart(2,'0')
+  const hh = (dt.getHours() + '').padStart(2,'0')
+  const mm = (dt.getMinutes() + '').padStart(2,'0')
+  const ss = (dt.getSeconds() + '').padStart(2,'0')
+  return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
+})
 
 // 引入外部图标
 import './assets/fonts/iconfont.css'

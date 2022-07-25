@@ -33,7 +33,12 @@ import {
     Calendar,
     Alert,
     Tabs,
-    TabPane
+    TabPane,
+    Steps,
+    Step,
+    CheckboxGroup,
+    Checkbox,
+    Upload
     } from 'element-ui'
 
 // 导入消息弹窗
@@ -75,3 +80,8 @@ Vue.use(Calendar)
 Vue.use(Alert)
 Vue.use(Tabs)
 Vue.use(TabPane)
+Vue.use(Steps)
+Vue.use(Step)
+Vue.use(CheckboxGroup)
+Vue.use(Checkbox)
+Vue.use(Upload)

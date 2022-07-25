@@ -325,7 +325,7 @@ export default {
       console.log(res.data);
       // 在赋值之前对每一项做一个循环,将展开列的数据以空格分开成数组
       res.data.forEach((item) => {
-        item.attr_vals = item.attr_vals ? item.attr_vals.split(",") : [];
+        item.attr_vals = item.attr_vals ? item.attr_vals.split(" ") : [];
         
         console.log(item.attr_vals);
         // 控制按钮与文本框的切换
