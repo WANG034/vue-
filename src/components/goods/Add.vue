@@ -286,7 +286,6 @@ export default {
         // 深拷贝
         const from = _.cloneDeep(this.addFrom)
         from.goods_cat = from.goods_cat.join(',')
-
         // 处理动态参数
         this.manyTableDate.forEach(item => {
           const newInfo = {
@@ -314,7 +313,6 @@ export default {
         }
         this.$message.success('添加商品成功！')
         this.$router.push('/home/goods')
-
       })
     }
   },
